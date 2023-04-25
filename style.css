@@ -284,4 +284,16 @@ html {
     background:pink;
   }
   
+  .revealable {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+  }
+  
+  .revealable.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
   

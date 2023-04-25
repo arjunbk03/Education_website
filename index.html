@@ -17,7 +17,7 @@
             <li class="navbar-item"><a href="#wifi">Find WiFi</a></li>
             <li class="navbar-item"><a href="#contact">Contact</a></li>
             <li><button id="theme-button">Toggle Dark Mode</button></li>
-
+            <li><button id="reduce-motion-button">Reduce Motion</button></li>
         </ul>
     </nav>
     <!-- Header -->
@@ -26,7 +26,6 @@
             <div class="logo-container">
                 <img src="img/logo.jpg" alt="Logo" id="logo">
             </div>
-            <div class="title-container">
                 <h1 id="page-title">Better Nepali Education</h1>
                 <h3>Find out about all the organizations that work in making education in Nepal better.</h3>
             </div>
@@ -38,8 +37,8 @@
     </header>
 
     <!-- About -->
-    <section id="about" class="about-container">
-        <div class="about">
+    <section id="about" class="about-container revealable">
+        <div class="about" >
             <h2>Education in Nepal</h2>
             <iframe width="466" height="243" src="https://www.youtube.com/embed/rGNPXf4cyd4" title="Teach For Nepal: Rebuild Nepal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             <p>Despite improvements in recent years, Nepal's education system still faces significant challenges, particularly in rural areas where access to quality education remains limited. However, there are organizations working tirelessly to improve the situation. The goal of this website is to provide a platform that connects individuals who are passionate about improving education in Nepal with these organizations.</p>
@@ -47,7 +46,7 @@
     </section>
 
     <!-- Data -->
-    <section class="data-container">
+    <section class="data-container revealable">
       <div class="data">
         <h3>Schools in Rural Nepal</h3>
         <img src="img/rural.webp" alt="Rural" class="teaching">
@@ -62,7 +61,7 @@
         </ul>
       </div>
       </div>
-      <div class="data">
+      <div class="data revealable">
         <h3>Why Does It Matter?</h3>
         <img src="img/EduConnectNepal.jpeg" alt="Reading" class="reading">
         <h4>It Affects Everyone</h4>
@@ -81,7 +80,7 @@
         <!-- info goes here -->
       </div>
 
-      <div class="signatures">
+      <div class="signatures revealable">
         <p>🖊️ Education Minister Shisir Khnal supports this.</p>
         <p>🖊️ The principal of Jana Uddhar supports this.</p>
         <p>🖊️ Rajan Maharjan from Teach for Nepal supports this.</p>
@@ -104,13 +103,13 @@
    
 </form>
 
-  <div class="signatures" id="signatures">
+  <div class="signatures revealable" id="signatures">
   <!-- signatures go here -->
 </div>
     </section>
 
     <!-- News -->
-    <section class="news">
+    <section class="news revealable">
       <h2>Recent News</h2>
       <a href="https://www.miragenews.com/world-bank-gives-120m-to-nepals-education-system-974329/" class="news-item">
         <h3>World Bank Gives $120M to Nepal’s Education System</h3>
@@ -123,10 +122,11 @@
     </article>
   </a>    
 
-  <footer class="footer">
+  <footer class="footer revealable">
     <p>&copy; 2023 Better Nepali Education</p>
   </footer>
   <script src="index.js"></script>
+
 </body>
 
 </html>

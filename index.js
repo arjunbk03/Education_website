@@ -73,3 +73,55 @@ document.getElementById("sign-now-button").addEventListener("click", (event) => 
   validateForm();
 });
 
+
+let animation = {
+  revealDistance: 150,
+  initialOpacity:0,
+  transitionDelay:0,
+  transitionDuration: "2s",
+  transitionProperty:"all",
+  transitionTimingFunction:"ease"
+}
+
+
+// Select every element with the class revealable
+const revealableContainers = document.querySelectorAll('.revealable');
+
+// Create the reveal function
+function reveal() {
+  for (let i = 0; i < revealableContainers.length; i++) {
+    let windowHeight = window.innerHeight;
+    let topOfRevealableContainer = revealableContainers[i].getBoundingClientRect().top;
+
+    if (topOfRevealableContainer < windowHeight - animation.revealDistance) {
+      // Add the active class to the revealableContainer's classlist
+      revealableContainers[i].classList.add('active');
+    } else {
+      // Remove the active class from the revealableContainer's classlist
+      revealableContainers[i].classList.remove('active');
+    }
+  }
+}
+
+// Add the reveal function as an event listener to the window with the type of event as 'scroll'
+window.addEventListener('scroll', reveal);
+
+//stretch project for week 8
+const reduceMotionButton = document.getElementById('reduce-motion-button');
+reduceMotionButton.addEventListener('click', reduceMotion);
+
+function reduceMotion() {
+  // Change the properties of the animation object
+  animation.transitionDuration = '0s'; // Set the transition duration to 0 seconds
+  animation.revealDistance = 0; // Set the animation distance to 0 pixels
+  animation.opacity = 1; // Set the final opacity to 1
+
+  // Loop through the revealableContainers
+  for (let i = 0; i < revealableContainers.length; i++) {
+    // Update the style of each revealableContainer using the values stored in the animation object
+    revealableContainers[i].style.transitionDuration = animation.transitionDuration;
+    revealableContainers[i].style.opacity = animation.opacity;
+    revealableContainers[i].style.transform = `translateY(${animation.revealDistance}px)`;
+  }
+}
+
